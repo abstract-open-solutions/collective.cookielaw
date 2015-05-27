@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="collective.cookielaw"
+    interface="collective.cookielaw.interfaces.ILayer"
+  />
+</layers>

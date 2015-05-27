@@ -1,0 +1,36 @@
+<registry>
+
+  <record name="collective.cookielaw.content_id_prefix">
+    <field type="plone.registry.field.TextLine">
+      <title>Cookie law - content ID prefix</title>
+      <description>The ID of the page that will contain the message of the cookie warning.
+        The language code will be added to it.</description>
+    </field>
+    <value>cookie-law-msg</value>
+  </record>
+
+  <record name="collective.cookielaw.jsonoptions">
+    <field type="plone.registry.field.Text">
+      <title>Cookie law - JSON options</title>
+      <description>Add JSON options here. Make sure to respect JSON syntax (eg: use double quotes for key/values).</description>
+    </field>
+    <value>
+{"link": "",
+ "learnMore": "",
+ "dismiss": "Got it!",
+ "theme": "light-floating"}
+    </value>
+  </record>
+
+  <record name="collective.cookielaw.confirm_button_text">
+    <field type="plone.registry.field.Dict">
+      <title>Cookie law - confirm button text</title>
+      <key_type type="plone.registry.field.TextLine" />
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value>
+      <element key="en">Ok!</element>
+    </value>
+  </record>
+
+</registry>
