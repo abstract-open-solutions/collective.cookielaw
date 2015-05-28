@@ -67,7 +67,7 @@ class CookieMessageViewlet(common.ViewletBase):
             logger.error("key {} missing in registry".format(CONFIRM_BUTTON_KEY)) # noqa
             button_settings = {}
         lang = self.ps.language()
-        settings['dismiss'] = button_settings.get(lang)
+        settings['dismiss'] = button_settings.get(lang, 'Ok')
         settings['message'] = self.get_message()
         return settings
 
