@@ -40,8 +40,9 @@ def create_default_content(site):
                 container=root,
                 type='Document',
                 id=new_id,
-                title='Cookie law - message %s' % lang,
             )
+            # set title here otherwise you get rename after creation
+            page.setTitle('Cookie law - message %s' % lang)
             page.setText(DEFAULT_MSG)
             page.setExcludeFromNav(True)
             # TODO: handle dexterity types
