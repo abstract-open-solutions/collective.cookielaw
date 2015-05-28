@@ -1,5 +1,5 @@
 <tal:block condition="view/available">
-    <script tal:content="string:var cookielaw_options = ${view/json_settings}" />
+    <script tal:content="string:var cookielaw_options = ${view/json_settings};" />
     <script>
         // XXX: no better way to unescape html???
         cookielaw_options['message'] = $('<textarea />').html(cookielaw_options['message']).text();

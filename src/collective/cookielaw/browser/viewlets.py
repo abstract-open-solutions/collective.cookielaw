@@ -28,20 +28,15 @@ class CookieMessageViewlet(common.ViewletBase):
         registry = api.portal.get_tool('portal_registry')
         root = self.ps.navigation_root()
         page = None
-        # TODO: handle
         try:
             page_id = registry[CONTENT_ID_KEY]
         except KeyError:
             page_id = ''
         if not page_id:
             return None
-        # we handle also the case where you have multilingual site,
-        # but w/out root folders, so that you could have
-        # page_id-en, page_id-fr, etc all in the same root.
-        for k in (page_id, page_id + '-' + self.ps.language()):
-            if base_hasattr(root, k):
-                page = getattr(root, k)
-                break
+        page_id = page_id + '-' + self.ps.language()
+        if base_hasattr(root, page_id):
+            page = getattr(root, page_id)
         return page
 
     @view.memoize
