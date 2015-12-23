@@ -4,7 +4,7 @@
                 tal:content="string:var cookielaw_options = ${view/json_settings};" />
         <script type="text/javascript">
             // XXX: no better way to unescape html???
-            cookielaw_options['message'] = $('<textarea />').html(cookielaw_options['message']).text();
+            cookielaw_options['message'] = $(document.createElement('textarea')).html(cookielaw_options['message']).text();
             window.cookieconsent_options = cookielaw_options;
         </script>
         <script type="text/javascript"
